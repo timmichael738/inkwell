@@ -1,0 +1,11 @@
+services:
+  inkwell:
+    build: .
+    ports:
+      - '4100:4100'
+    volumes:
+      - inkwell-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  inkwell-data:
